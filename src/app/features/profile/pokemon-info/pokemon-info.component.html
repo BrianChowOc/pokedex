@@ -1,0 +1,69 @@
+<div
+  class="display-flex flex-direction-column justify-content-center align-items-center width-100"
+>
+  <a
+    [routerLink]="infoUrl"
+    class="font-size-18 font-weight-bold margin-bottom-10 underline"
+    >Retour à la liste des Pokemons</a
+  >
+  <div
+    class="display-flex background-img border-radius-15 width-50 height-50 justify-content-space-around align-items-center padding-30"
+  >
+    <img
+      [src]="pokemon.sprites.regular"
+      alt="pokemon-picture"
+      class="img-size border-radius-15"
+    />
+    <div
+      class="display-flex flex-direction-column justify-content-center gap-10 background-white padding-info"
+    >
+      <div class="display-flex gap-10 font-size-18 justify-content-center">
+        <span class="font-weight-bold">{{ pokemon.name.fr }}</span>
+        <span class="font-weight-bold">#{{ pokemon.pokedexId }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Type</span>
+        <span
+          *ngFor="let type of pokemon.types"
+          color-type
+          [type]="type.name"
+          class="color-white padding-type border-radius-5 font-weight-bold"
+        >
+          {{ type.name }}
+        </span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Taille</span>
+        <span class="font-weight-bold">{{ pokemon.height }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Poids</span>
+        <span class="font-weight-bold">{{ pokemon.weight }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Point de vie</span
+        ><span class="font-weight-bold">{{ pokemon.stats.hp }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Attaque</span
+        ><span class="font-weight-bold">{{ pokemon.stats.atk }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Défense</span
+        ><span class="font-weight-bold">{{ pokemon.stats.def }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Attaque spéciale</span
+        ><span class="font-weight-bold">{{ pokemon.stats.spe_atk }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Défense spéciale</span
+        ><span class="font-weight-bold">{{ pokemon.stats.spe_def }}</span>
+      </div>
+      <div class="display-flex gap-10">
+        <span class="underline">Vitesse</span
+        ><span class="font-weight-bold">{{ pokemon.stats.vit }}</span>
+      </div>
+    </div>
+  </div>
+</div>
