@@ -1,0 +1,18 @@
+<div
+  class="display-flex flex-wrap-wrap justify-content-center gap-10 height-100"
+>
+  <app-pokemon-item
+    *ngFor="let pokemon of paginatedData"
+    [pokemon]="pokemon"
+    class="width-400 height-150px"
+  ></app-pokemon-item>
+</div>
+<mat-paginator
+  pageSize="pageSize"
+  [length]="100"
+  [pageIndex]="currentPage"
+  [pageSizeOptions]="[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]"
+  (page)="onPaginateChange($event)"
+  showFirstLastButtons
+  hidePageSize
+></mat-paginator>

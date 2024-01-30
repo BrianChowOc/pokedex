@@ -1,1 +1,311 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: white;
+  color: #2A2E43;
+}
+
+a {
+  color: #2A2E43;
+  text-decoration: none;
+}
+
+button {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.background-color-blue {
+    background-color: blue;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.height-150px {
+  height: 150px;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.height-50 {
+  height: 50%;
+}
+
+.height-75 {
+  height: 75%;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+    display: flex;
+  }  
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+    
+  }
+
+.space-around {
+  justify-content: space-around;
+}
+  
+  .align-items-center {
+    align-items: center;
+  }
+
+  .align-items-end {
+    align-items: end;
+  }
+ 
+  .align-self-start {
+    align-self: start;
+  }
+
+  .align-self-center {
+    align-self: center;
+  }
+
+  .margin-top-20 {
+    margin-top: 20px;
+  }
+
+  .margin-top-auto {
+    margin-top: auto;
+  }
+
+  .padding-5 {
+    padding: 5px;
+  }
+
+  .padding-10 {
+    padding: 10px;
+  }
+
+  .padding-30 {
+    padding: 30px;
+  }
+
+  .justify-content-right {
+    justify-content: right;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .justify-content-end {
+    justify-content: end;
+  }
+  
+.order-0 {
+    order: 0;
+}
+
+.order-1 {
+    order: 1;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.color-primary {
+    color: #73b1c0;
+}
+
+.color-secondary {
+  color: #ffa384;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-gray {
+  color: #999999;
+}
+
+.border-radius-5 {
+    border-radius: 5px;
+  }
+
+.border-radius-15 {
+  border-radius: 15px;
+}
+
+.border-radius-20 {
+  border-radius: 20px;
+}
+
+.border-radius-30 {
+  border-radius: 30px;
+}
+
+.border-radius-50 {
+    border-radius: 50%;
+  }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.background-primary {
+  background-color: #73b1c0;
+}
+
+.background-secondary {
+  background-color: #ffa384;
+}
+
+
+.margin-10 {
+  margin: 10px
+}
+
+.margin-50 {
+  margin: 50px;
+}
+
+.margin-rigth-50 {
+  margin-right: 50px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.margin-bottom-100 {
+  margin-bottom: 100px;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.min-width-130 {
+  min-width: 130px !important;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.border-color-primary {
+  border-color: #73b1c0 !important;
+}
+
+.border-color-secondary {
+  border-color: #ffa384 !important;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.z-index-0 {
+  z-index: 0;
+}

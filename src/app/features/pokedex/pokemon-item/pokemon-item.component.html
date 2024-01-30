@@ -1,0 +1,30 @@
+<div
+  class="margin display-flex height-100 cursor-pointer border-radius-15 background-img"
+  (click)="onProfile()"
+  *ngIf="pokemon.pokedexId"
+>
+  <div
+    class="display-flex flex-direction-column space-around height-auto margin-left-10 margin-right-100"
+  >
+    <div class="font-weight-bold font-size-18 color-white">
+      {{ pokemon.name.fr }}
+      <span class="color-ababab">#{{ pokemon.pokedexId }}</span>
+    </div>
+    <div class="display-flex gap-10">
+      <span *ngFor="let type of pokemon.types">
+        <img
+          [src]="type.image"
+          alt="pokemon-type-image"
+          class="img-type-size"
+        />
+      </span>
+    </div>
+  </div>
+  <div class="margin-bottom-10">
+    <img
+      [src]="pokemon.sprites.regular"
+      alt="pokemon-picture"
+      class="img-size"
+    />
+  </div>
+</div>
