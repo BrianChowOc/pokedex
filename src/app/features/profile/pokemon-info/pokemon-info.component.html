@@ -1,68 +1,109 @@
 <div
-  class="display-flex flex-direction-column justify-content-center align-items-center width-100"
+  class="display-flex flex-direction-column justify-content-center align-items-center width-100 height-auto"
 >
-  <a
-    [routerLink]="infoUrl"
-    class="font-size-18 font-weight-bold margin-bottom-10 underline"
-    >Retour à la liste des Pokemons</a
+  <a [routerLink]="infoUrl" class="font-size-18 margin-bottom-10 underline"
+    >Retour au pokeDex</a
   >
   <div
-    class="display-flex background-img border-radius-15 width-50 height-50 justify-content-space-around align-items-center padding-30"
+    class="display-flex flex-direction-column background-color-card position-relative border-radius-15 gap-30 width-50 height-50 justify-content-space-around align-items-center padding-30"
   >
     <img
-      [src]="pokemon.sprites.regular"
-      alt="pokemon-picture"
-      class="img-size border-radius-15"
+      src="../../../../assets/images/pokeball.svg"
+      alt="pokeball-img"
+      class="z-index-0 color-white svg-position"
     />
     <div
-      class="display-flex flex-direction-column justify-content-center gap-10 background-white padding-info"
+      class="display-flex width-100 align-items-center color-white gap-30 z-index-50"
     >
-      <div class="display-flex gap-10 font-size-18 justify-content-center">
-        <span class="font-weight-bold">{{ pokemon.name.fr }}</span>
-        <span class="font-weight-bold">#{{ pokemon.pokedexId }}</span>
-      </div>
-      <div class="display-flex gap-10">
-        <span class="underline">Type</span>
-        <span
-          *ngFor="let type of pokemon.types"
-          color-type
-          [type]="type.name"
-          class="color-white padding-type border-radius-5 font-weight-bold"
+      <img
+        [src]="pokemon.sprites.regular"
+        alt="pokemon-picture"
+        class="img-size border-radius-15"
+      />
+      <div class="display-flex flex-direction-column gap-30">
+        <div
+          class="display-flex flex-direction-column gap-30 align-items-start"
         >
-          {{ type.name }}
-        </span>
+          <div class="display-flex gap-10 font-size-40 justify-content-center">
+            <span class="font-weight-bold">{{ pokemon.name.fr }}</span>
+          </div>
+          <div class="display-flex gap-10">
+            <span
+              *ngFor="let type of pokemon.types"
+              color-type
+              [type]="type.name"
+              class="color-white padding-type border-radius-15 height-auto width-auto font-size-30"
+            >
+              {{ type.name }}
+            </span>
+          </div>
+        </div>
+        <div class="display-flex flex-direction-column gap-30">
+          <div class="display-flex gap-30">
+            <span class="font-size-20">TAILLE</span>
+            <span class="font-weight-bold font-size-30">{{
+              pokemon.height
+            }}</span>
+          </div>
+          <div class="display-flex gap-30">
+            <span class="font-size-20">POIDS</span>
+            <span class="font-weight-bold font-size-30">{{
+              pokemon.weight
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="display-flex flex-direction-column background-white width-75 border-radius-15 gap-10 padding-30"
+    >
+      <div class="display-flex gap-10">
+        <span
+          class="background-color-card color-white border-radius-15 stat-container display-flex justify-content-center align-items-center font-size-20"
+          >HP</span
+        ><span class="font-size-30 stat-data-container"
+          >{{ pokemon.stats.hp }}/{{ pokemon.stats.hp }}</span
+        >
       </div>
       <div class="display-flex gap-10">
-        <span class="underline">Taille</span>
-        <span class="font-weight-bold">{{ pokemon.height }}</span>
+        <span
+          class="background-color-card color-white border-radius-15 stat-container display-flex justify-content-center align-items-center font-size-20"
+          >ATTACK</span
+        ><span class="font-size-30 stat-data-container">{{
+          pokemon.stats.atk
+        }}</span>
       </div>
       <div class="display-flex gap-10">
-        <span class="underline">Poids</span>
-        <span class="font-weight-bold">{{ pokemon.weight }}</span>
+        <span
+          class="background-color-card color-white border-radius-15 stat-container display-flex justify-content-center align-items-center font-size-20"
+          >DEFENSE</span
+        ><span class="font-size-30 stat-data-container">{{
+          pokemon.stats.def
+        }}</span>
       </div>
       <div class="display-flex gap-10">
-        <span class="underline">Point de vie</span
-        ><span class="font-weight-bold">{{ pokemon.stats.hp }}</span>
+        <span
+          class="background-color-card color-white border-radius-15 stat-container display-flex justify-content-center align-items-center font-size-20"
+          >SP.ATK</span
+        ><span class="font-size-30 stat-data-container">{{
+          pokemon.stats.spe_atk
+        }}</span>
       </div>
       <div class="display-flex gap-10">
-        <span class="underline">Attaque</span
-        ><span class="font-weight-bold">{{ pokemon.stats.atk }}</span>
+        <span
+          class="background-color-card color-white border-radius-15 stat-container display-flex justify-content-center align-items-center font-size-20"
+          >SP.DEF</span
+        ><span class="font-size-30 stat-data-container">{{
+          pokemon.stats.spe_def
+        }}</span>
       </div>
       <div class="display-flex gap-10">
-        <span class="underline">Défense</span
-        ><span class="font-weight-bold">{{ pokemon.stats.def }}</span>
-      </div>
-      <div class="display-flex gap-10">
-        <span class="underline">Attaque spéciale</span
-        ><span class="font-weight-bold">{{ pokemon.stats.spe_atk }}</span>
-      </div>
-      <div class="display-flex gap-10">
-        <span class="underline">Défense spéciale</span
-        ><span class="font-weight-bold">{{ pokemon.stats.spe_def }}</span>
-      </div>
-      <div class="display-flex gap-10">
-        <span class="underline">Vitesse</span
-        ><span class="font-weight-bold">{{ pokemon.stats.vit }}</span>
+        <span
+          class="background-color-card color-white border-radius-15 stat-container display-flex justify-content-center align-items-center font-size-20"
+          >SPEED</span
+        ><span class="font-size-30 stat-data-container">{{
+          pokemon.stats.vit
+        }}</span>
       </div>
     </div>
   </div>

@@ -55,10 +55,18 @@
     width: 30px;
 }
 
-.background-img {
-    background-image: url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/204364595/original/86db6005cd51b4f60e71cca277f603a82cf5646a/draw-a-pixel-pokemon-battle-background.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
+.color-card {
+    background-color: #3A3737;
 }
+
+.svg-position {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.hand-cursor {
+    cursor: pointer; 
+  }
